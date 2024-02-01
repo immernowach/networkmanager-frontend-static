@@ -1,0 +1,14 @@
+[
+    {
+        "nickname": "Mein Gerät 1",
+        "mac": "00:11:22:33:44:55"
+    },
+    {
+        "nickname": "Mein Gerät 2",
+        "mac": "66:77:88:99:AA:BB"
+    },
+    {
+        "nickname": "Mein Gerät 3",
+        "mac": "CC:DD:EE:FF:00:11"
+    }
+]

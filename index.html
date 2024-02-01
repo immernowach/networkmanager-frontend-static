@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Manager</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body class="font-source-sans">
+    <div class="flex flex-col items-center">
+
+        <h1 class="text-4xl font-bold text-center py-5">Network Manager</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+            <div class="shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <h2 class="text-2xl font-semibold text-center py-3">Wake on LAN senden</h2>
+                <form id="mac-form" class="flex flex-col items-center">
+                    <label for="mac" class="mb-2">MAC-Adresse</label>
+                    <input type="text" name="mac" id="mac" placeholder="00:00:00:00:00:00" required
+                        class="mb-3 px-3 py-2 border rounded">
+                    <input type="submit" value="aufwecken" class="bg-blue-500 text-white px-4 py-2 rounded">
+                </form>
+            </div>
+
+            <div class="shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <h2 class="text-2xl font-semibold text-center py-3">MAC anhand einer IP finden</h2>
+                <form id="ip-form" class="flex flex-col items-center">
+                    <label for="ip" class="mb-2">IP-Adresse</label>
+                    <input type="text" name="ip" id="ip" placeholder="192.168.178.1" required
+                        class="mb-3 px-3 py-2 border rounded">
+                    <input type="submit" value="senden" class="bg-blue-500 text-white px-4 py-2 rounded">
+                </form>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-center py-3">Favoriten</h2>
+
+        <div id="favorites-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+        <div id="response"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
